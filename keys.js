@@ -2,9 +2,17 @@
 
 // from w3Schools: (take inspiration ig)
 
-const k = document.getElementById("k");
+const keys = document.querySelectorAll('.keys');
 
-// Let k listen for keydown
-k.addEventListener("keydown", function (event) {
-  document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+keys.forEach((key) => {
+  key.addEventListener('click', (e) => {
+    const clickedKey = event.target.dataset.list;
+      console.log(key);
+  })
+
+  
 });
+
+
+
+// ref: http://geeksforgeeks.org/javascript/build-a-piano-using-html-css-and-javascript/
