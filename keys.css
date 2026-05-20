@@ -2,6 +2,7 @@
 .board {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: rgb(26, 5, 5);
     width: 50vw;
     border: 1vh solid black;
@@ -11,6 +12,7 @@
 
 .keys {
     display: flex;
+    justify-content: center;
     list-style-type: none;
     color: grey;
 }
@@ -37,4 +39,6 @@
 
 
 
-
+#vol{
+    width: 20%;
+}
