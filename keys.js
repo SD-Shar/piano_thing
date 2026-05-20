@@ -171,6 +171,14 @@ document.addEventListener('keyup', (event) => {
 
 });
 
+// addEventListener('input', (scale) => {
+//   if (value) {
+    
+//   } else {
+    
+//   }
+// })
+
 
 // ref: http://geeksforgeeks.org/javascript/build-a-piano-using-html-css-and-javascript/
 // ref: https://stackoverflow.com/questions/74915532/how-do-you-detect-directional-arrow-keypresses-in-javascript
