@@ -15,6 +15,9 @@ keys.forEach((key) => {
   })
 
 
+  
+
+
   document.addEventListener('keydown', (event) => {
     if (event.key == "a") {
       console.log("a");
