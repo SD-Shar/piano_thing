@@ -15,7 +15,16 @@ keys.forEach((key) => {
   })
 
 
-  
+const whiteKeys = [a,s,d,f,g,h,j]
+
+
+
+
+
+
+
+
+
 
 
   document.addEventListener('keydown', (event) => {
