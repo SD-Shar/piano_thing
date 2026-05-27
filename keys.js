@@ -114,8 +114,12 @@ document.addEventListener('keyup', (event) => {
 
 });
     
+// ![27/5/26] fra StackOverflow
 
-
+let volume = document.getElementById('vol');
+volume.addEventListener("change", function(e) {
+  audio.volume = e.currentTarget.value / 100;
+})
 
 
 //   document.addEventListener('keydown', (event) => {
