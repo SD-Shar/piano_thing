@@ -1,10 +1,83 @@
 
-
 // from w3Schools: (take inspiration ig)
 
 const keys = document.querySelectorAll('.keys');
 const whiteKeys = [a,s,d,f,g,h,j];
 const blackKeys = [w,e,t,y,u];
+
+keyboard = [
+  {
+    tast: "a",
+    note: "C",
+    lyd: "keys/C.mp3"
+  } ,
+
+  {
+    tast: "w",
+    note: "Db",
+    lyd: "keys/Db.mp3"
+  } ,
+
+  {
+    tast: "s",
+    note: "D",
+    lyd: "keys/D.mp3"
+  } ,
+
+  {
+    tast: "e",
+    note: "Eb",
+    lyd: "keys/Eb.mp3"
+  } ,
+
+  {
+    tast: "d",
+    note: "E",
+    lyd: "keys/E.mp3"
+  } ,
+
+  {
+    tast: "f",
+    note: "F",
+    lyd: "keys/F.mp3"
+  } ,
+
+  {
+    tast: "t",
+    note: "Gb",
+    lyd: "keys/Gb.mp3"
+  } ,
+
+  {
+    tast: "g",
+    note: "G",
+    lyd: "keys/G.mp3"
+  } ,
+
+  {
+    tast: "y",
+    note: "Ab",
+    lyd: "keys/Ab.mp3"
+  } ,
+
+  {
+    tast: "h",
+    note: "A",
+    lyd: "keys/A.mp3"
+  } , 
+
+  {
+    tast: "u",
+    note: "Bb",
+    lyd: "keys/Bb.mp3"
+  } ,
+
+  {
+    tast: "j",
+    note: "B",
+    lyd: "keys/B.mp3"
+  }
+];
 
 keys.forEach((key) => {
   key.addEventListener('click', (e) => {
@@ -14,11 +87,28 @@ keys.forEach((key) => {
     console.log(clickedKey);
   });
 
-  document.addEventListener('keydown', () => {
-  if (key == whiteKeys) {
-    console.log("aaaaaa");
-    
-  }
+document.addEventListener('keydown', (event) => {
+  keyboard.forEach(key => {
+    if (event.key == key.tast) {
+      const note = new Audio(key.lyd);
+      note.play();
+      document.getElementById(key.tast).style.opacity = "50%"
+      document.getElementById(key.tast).style.transition = "0.5s"
+      console.log(key.note);
+}
+
+document.addEventListener('keyup', (event) => {
+  keyboard.forEach(key => {
+    if (event.key == key.tast) {
+      document.getElementById(key.tast).style.opacity = "100%"
+      document.getElementById(key.tast).style.transition = "0.5s"
+    }
+  })
+
+});
+
+
+});
 
 });
 
