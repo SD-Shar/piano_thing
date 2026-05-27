@@ -15,6 +15,7 @@
     justify-content: center;
     list-style-type: none;
     color: grey;
+    position: relative;
 }
 
 .whiteKey {
@@ -24,18 +25,31 @@
     border: 1px solid black;
 }
 
+.whiteKey:active{
+    background-color: rgb(198, 201, 203);
+    transition: 0.3s;
+}
+
+.blackKey:active{
+    background-color: rgb(31, 31, 31);
+    transition: 0.3s;
+}
+
 .blackKey {
     background-color: rgb(45, 45, 45);
-    padding: 2vh;
+    padding: 2%;
     border-radius: 0.5vh;
-    margin-bottom: 25px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-bottom: 5%;
+    margin-right: -3%;
+    margin-left: -3%;
 
     z-index: 2;
 }
 
-
+#w{
+    margin-left: -3%;
+    width: 1.5%;
+}
 
 #vol{
     width: 20%;
